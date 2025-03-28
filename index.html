@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAssist: Support Dog Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GenAssist: Support Dog Project</h1>
+    <nav>
+      <ul>
+         <li><a href="#agenda">Current Agenda</a></li>
+         <li><a href="#gameplan">Game Plan</a></li>
+         <li><a href="#labnotebook">Lab Notebook</a></li>
+         <li><a href="#results">Results</a></li>
+         <li><a href="#goals">Goals &amp; Questions</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="agenda">
+      <h2>Current Agenda</h2>
+      <ul>
+         <li>Develop support robot dog for visually impaired users</li>
+         <li>Implement robust real-time vision using RGB &amp; LIDAR</li>
+         <li>Fine-tune YOLO v8 for obstacle and object detection</li>
+         <li>Deploy on NVIDIA Issac Lab and integrate ROS2</li>
+         <li>Incorporate LLM for command interpretation and warnings</li>
+      </ul>
+    </section>
+
+    <section id="progress-images">
+        <h2>Project Visuals</h2>
+      
+        <div class="image-gallery">
+          
+            <figure>
+              <img src="images/drawing.png" alt="Vision Language Model comparison">
+              <figcaption>Comparative performance of VLMs on hazard comprehension.</figcaption>
+            </figure>
+          
+            <figure>
+              <img src="images/diagram.png" alt="Structure of the system">
+              <figcaption>System pipeline from perception to alert generation.</figcaption>
+            </figure>
+          </div>
+          
+          
+      </section>
+      
+    <section id="gameplan">
+      <h2>General Game Plan</h2>
+      <p>
+        Our objectives include fine-tuning YOLO v8 for outdoor environments, establishing performance metrics (mAP, IoU, precision, recall), and integrating a vision system with ROS2 and LLMs to generate real-time warnings for potential hazards.
+      </p>
+    </section>
+
+    <section id="labnotebook">
+      <h2>Lab Notebook</h2>
+      <article>
+         <h3>Week of 1/17/2025-1/24/2025</h3>
+         <p>
+           Initiated dataset download and set up training, testing, and validation sets for YOLO v8. Explored annotation workflows using Roboflow and analyzed early training metrics.
+         </p>
+         <a href="#more-notebook" id="toggle-notebook">Read More</a>
+         <div id="more-notebook" style="display: none;">
+            <p>
+              Detailed progress includes training metrics visualization, debugging of annotation issues, and the establishment of baseline performance for object detection and segmentation tasks.
+              <br><br>
+              <strong>Week of 1/25–1/31:</strong><br>
+              Used YOLOv8 segmentation to label roads (danger zones) and sidewalks (safe zones). Extracted video frames for instance segmentation. Learned the distinction between detection vs. segmentation data formats and fixed label mismatches.
+              <br><br>
+              <strong>Week of 2/2–2/9:</strong><br>
+              Trained YOLOv8 on Phoenix street footage. Implemented a “walkable zone” model with green overlays for safe navigation. Visualized results via video and segmentation overlays.
+              <br><br>
+              <strong>Week of 2/9–2/15:</strong><br>
+              Developed a Proximity Detection algorithm using bounding boxes and real-time video overlays to identify collision risks. Refined walkable zones and tested different video input environments.
+              <br><br>
+              <strong>Week of 2/16–3/1:</strong><br>
+              Evaluated vision-language models (VILA, BLIP, VILT, LLaVA). Found VILA-2.7b to be most context-aware. Integrated object detection with semantic terrain analysis for robust scene understanding.
+              <br><br>
+              <strong>Week of 3/1–3/8:</strong><br>
+              Deployed the walkable model on the Yakuza robot dog. Achieved 100x faster inference using GPU optimization. Fine-tuned performance under low-light conditions and compared small-scale VLMs for urban terrain interpretation.
+              <br><br>
+              <strong>Week of 3/8–3/22:</strong><br>
+              Tested 8 Vision Language Models through Ollama for terrain, safety, and hazard comprehension. Scored models by descriptiveness and speed. Started framework for integrating VLM and YOLOv8 outputs for smart, real-time alerts.
+            </p>
+          </div>
+          
+      </article>
+      <!-- Additional weekly progress articles can be inserted here -->
+    </section>
+
+    <section id="results">
+      <h2>Results</h2>
+      <p>
+        The implementation successfully identifies safe zones (e.g., sidewalks) and obstacles (e.g., vehicles, poles) using instance segmentation. Videos and performance metrics demonstrate improved inference times (up to 100× faster on GPU) and robust detection under varying conditions.
+      </p>
+      <ul>
+         <li><a href="https://drive.google.com/file/d/1FrtT-njPnh0LSA1gIH-XjNTRyCMGV2V1/view?usp=sharing" target="_blank">Phoenix Walk Video</a></li>
+         <li><a href="https://drive.google.com/file/d/1nqb3m0Np4vnYqKEKbwjbF6ouwC2ekNz_/view?usp=sharing" target="_blank">Obstacle Warning Video</a></li>
+      </ul>
+    </section>
+
+    <section id="goals">
+      <h2>Goals &amp; Questions</h2>
+      <p>
+        Next steps include uploading additional datasets, refining segmentation for better obstacle warnings (including audio alerts), and optimizing model performance across different lighting conditions and environments.
+      </p>
+      <ul>
+         <li>Integrate audio warnings using a connected speaker (PHP/Drupal module)</li>
+         <li>Enhance model accuracy with further data annotation</li>
+         <li>Deploy on real hardware (Yakuza robot dog) with ROS2 integration</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Support Dog Project. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

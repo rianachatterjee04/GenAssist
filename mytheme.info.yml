@@ -1,0 +1,10 @@
+name: Support Dog Project Theme
+type: theme
+core_version_requirement: ^8 || ^9
+base theme: classy
+description: 'A custom theme for the Support Dog Project lab notebook website.'
+regions:
+  header: Header
+  primary_menu: 'Primary Menu'
+  content: Content
+  footer: Footer
