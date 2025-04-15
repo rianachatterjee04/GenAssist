@@ -1,7 +1,7 @@
 # GenAssist
 
 ```
-ideo-analysis-system/
+yakuza-system/
 │
 ├── README.md               # Project documentation
 ├── requirements.txt        # Project dependencies
