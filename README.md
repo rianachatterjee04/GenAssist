@@ -11,8 +11,9 @@ yakuza-system/
 │   ├── videos/             # Input videos folder
 │   └── photos/             # Input photos folder
 │   ├── database.py
-|   │   ├── tested-videos-and-photos    #output video after testing
-|   │   ├── tested.txt files            #output file after environmental analysis 
+|   │   ├── tested-videos-and-photos    #output video after testing (just for testing)
+|   │   ├── tested.txt files            #output file after environmental analysis (just for testing)
+|   │   ├── GPS integration             #importing from google maps or other GPS/navigation systems
 
 ├── output/                 # Output directory
 │   ├── processed_videos/   # Processed video files
