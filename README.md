@@ -11,7 +11,9 @@ yakuza-system/
 │   ├── videos/             # Input videos folder
 │   └── photos/             # Input photos folder
 │   ├── database.py
-│
+|   │   ├── tested-videos-and-photos    #output video after testing
+|   │   ├── tested.txt files            #output file after environmental analysis 
+
 ├── output/                 # Output directory
 │   ├── processed_videos/   # Processed video files
 │   └── analysis_reports/   # Text analysis reports
